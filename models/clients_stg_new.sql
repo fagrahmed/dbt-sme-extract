@@ -3,6 +3,7 @@
     unique_key= ['clientid'],
     depends_on=['clients_stg'],
     on_schema_change='append_new_columns'
+)}}
 
 {% set table_exists_query = "SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema = 'dbt-dimensions' AND table_name = 'clients_dimension')" %}
 {% set table_exists_result = run_query(table_exists_query) %}
