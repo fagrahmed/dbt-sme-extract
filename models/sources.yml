@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+        
+  - name: axis_sme
+    tables:
+      - name: clients
+      - name: clientemployees
+      - name: disbursementtransactions
+      - name: bankpaymenttransactions
+      - name: bankpayments
+
+  - name: dbt-dimensions
+    tables:
+      - name: clients_dimension
+      - name: clients_stg
+      - name: clients_stg_new
+      - name: clients_stg_update
+      - name: clients_stg_exp
+
+      - name: employees_dimension
+      - name: employees_stg
+      - name: employees_stg_new
+      - name: employees_stg_update
+      - name: employees_stg_exp
+
+
